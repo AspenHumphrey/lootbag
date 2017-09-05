@@ -10,9 +10,10 @@
   "keywords": [],
   "description": "",
   "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.5.0",
     "modules": "^0.4.0",
     "node": "^8.3.0",
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
-    }
+    "sqlite3": "^3.1.9"
+  }
 }
