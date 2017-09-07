@@ -7,12 +7,31 @@
 // ***********************************
 
 
-const { assert: { equal, deepEqual, notEqual, isFunction, isObject } } = require('chai');
-const { addToy } = require('../lootbag');
+const { assert: { equal, deepEqual, notEqual, isFunction, isObject, isString } } = require('chai');
+const { addToy, getToy } = require('../lootbag');
 
-    describe('addToy', () => {
-        it('should exist', () => {
-            isFunction(addToy);
-        });
-    // })
+describe('add toy', () => {
+
+  it('should exist', () => {
+    isFunction(addToy);
+  });
+
+  it('should accept two strings as an argument',  () => {
+    addToy("sonic", "jevon");
+  })
+
 });
+
+describe('get toy', () => {
+  
+    it('should exist', () => {
+      isFunction(getToy);
+    });
+  
+    it('should return a string',  () => {
+      getToy("jevon")
+      .then( (data) => {
+        isObject(data);
+      })
+    })
+  });
